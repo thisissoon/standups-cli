@@ -46,6 +46,8 @@ askDay()
 .then(stick => {
   if (stick) {
     return createDay(standUp.date);
+  } else {
+    process.exit();
   }
 })
 .then(dayID => {
