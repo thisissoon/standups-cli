@@ -18,6 +18,7 @@
   "homepage": "https://github.com/jackhkmatthews/stand-ups-visualisation-cli#readme",
   "dependencies": {
     "got": "^7.1.0",
-    "inquirer": "^3.2.3"
+    "inquirer": "^3.2.3",
+    "rx": "^4.1.0"
   }
 }
