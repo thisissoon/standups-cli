@@ -1,0 +1,26 @@
+[
+  {
+    "ID": "dc5a8771-9714-11e7-9ed7-4dbf46064aeb",
+    "firstName": "alex",
+    "lastName": "light",
+    "role": "md"
+  },
+  {
+    "ID": "dc5afca7-9714-11e7-9ed7-4dbf46064aeb",
+    "firstName": "andy",
+    "lastName": "notsure",
+    "role": "notsure"
+  },
+  {
+    "ID": "dc5a8773-9714-11e7-9ed7-4dbf46064aeb",
+    "firstName": "chris",
+    "lastName": "reeves",
+    "role": "developer"
+  },
+  {
+    "ID": "dc5afca6-9714-11e7-9ed7-4dbf46064aeb",
+    "firstName": "dave",
+    "lastName": "notsure",
+    "role": "notsure"
+  }
+]

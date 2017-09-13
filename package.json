@@ -1,0 +1,23 @@
+{
+  "name": "stand-ups-visualisation-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackhkmatthews/stand-ups-visualisation-cli.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jackhkmatthews/stand-ups-visualisation-cli/issues"
+  },
+  "homepage": "https://github.com/jackhkmatthews/stand-ups-visualisation-cli#readme",
+  "dependencies": {
+    "got": "^7.1.0",
+    "inquirer": "^3.2.3"
+  }
+}
