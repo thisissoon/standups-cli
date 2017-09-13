@@ -1,5 +1,9 @@
 const inquirer = require('inquirer');
 
+const askStaffMember = require('./staff-member').ask;
+
+const createStaffMember = require('../http/staff-member').create;
+
 function getQuestions(staffMembers) {
   return [
     {
@@ -25,18 +29,28 @@ function prompt(staffMembers, positions){
   return inquirer.prompt(getQuestions(staffMembers))
     .then(answers => {
       if (answers.position.ID === null) {
-        return 'ADD NEW STAFF MEMBER';
+        return askStaffMember()
+          .then(staffMember => {
+            return createStaffMember(staffMember);
+          })
+          .then(staffMember => {
+            staffMembers.push({
+              name: `${staffMember.firstName} ${staffMember.lastName}`,
+              value: staffMember
+            });
+            return prompt(staffMembers, positions);
+          });
       } else {
         positions.push(answers.position);
         staffMembers = staffMembers.filter((staffMember) => {
           return staffMember.value.ID !== answers.position.ID;
         });
-        if (answers.anotherPosition && staffMembers[0]) {
-          return prompt(staffMembers, positions);
-        } else {
-          return positions;
-        }
-      };
+      }
+      if (answers.anotherPosition && staffMembers[0]) {
+        return prompt(staffMembers, positions);
+      } else {
+        return positions;
+      }
     });
 }
 
