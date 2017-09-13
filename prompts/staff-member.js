@@ -1,11 +1,10 @@
 var inquirer = require('inquirer');
 
-
 function ask() {
   const questions = [
     {
       type: 'input',
-      name: 'first name',
+      name: 'firstName',
       message: 'Staff members first name?',
       validate: function (value) {
         var fail = value.match(/[^a-z | ^\s]+/g);
@@ -17,7 +16,7 @@ function ask() {
     },
     {
       type: 'input',
-      name: 'last name',
+      name: 'lastName',
       message: 'Staff members last name?',
       validate: function (value) {
         var fail = value.match(/[^a-z | ^\s]+/g);
