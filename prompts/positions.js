@@ -24,16 +24,19 @@ function getQuestions(staffMembers) {
 function prompt(staffMembers, positions){
   return inquirer.prompt(getQuestions(staffMembers))
     .then(answers => {
-      if (answers.position.ID === null) process.exit();
-      positions.push(answers.position);
-      staffMembers = staffMembers.filter((staffMember) => {
-        return staffMember.value.ID !== answers.position.ID;
-      });
-      if (answers.anotherPosition && staffMembers[0]) {
-        return prompt(staffMembers, positions);
+      if (answers.position.ID === null) {
+        return 'ADD NEW STAFF MEMBER';
       } else {
-        return positions;
-      }
+        positions.push(answers.position);
+        staffMembers = staffMembers.filter((staffMember) => {
+          return staffMember.value.ID !== answers.position.ID;
+        });
+        if (answers.anotherPosition && staffMembers[0]) {
+          return prompt(staffMembers, positions);
+        } else {
+          return positions;
+        }
+      };
     });
 }
 

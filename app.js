@@ -1,5 +1,6 @@
 const askDay = require('./prompts').day.ask;
 const askPositions = require('./prompts').positions.ask;
+const askStaffMember = require('./prompts').staffMember.ask;
 const askSummaries = require('./prompts').summaries.ask;
 const askStandUpConfirmation = require('./prompts').standUpConfirmation.ask;
 
