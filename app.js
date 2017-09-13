@@ -1,6 +1,5 @@
 const askDay = require('./prompts').day.ask;
 const askPositions = require('./prompts').positions.ask;
-const askStaffMember = require('./prompts').staffMember.ask;
 const askSummaries = require('./prompts').summaries.ask;
 const askStandUpConfirmation = require('./prompts').standUpConfirmation.ask;
 
@@ -62,20 +61,3 @@ askDay()
   printSaveConfirmation(standUp);
 })
 .catch(err => console.log(err));
-
-
-/**
- * 1. ask for date
- * 2. ask for positions
- *  2.1 get staff-members
- *  2.2 recursively ask for next positions
- * 3. ask for summaries
- *  3.1 get positions already entered
- *  3.2 recursively as for next summary
- * 4. confirm complete standUp with user
- * 5. post standUp to server
- *  5.1 create Day
- *  5.2 recursively save positions (bulk create?)
- *  5.3 recusively save summaries (bulk create?)
- * 6. confirm save to user
- */
