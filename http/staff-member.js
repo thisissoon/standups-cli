@@ -1,11 +1,12 @@
 const got = require('got');
+const config = require('../config/config');
 
 function list() {
-  return got('http://localhost:3000/v1/staff-members?sort=firstName:asc', { json: true });
+  return got(`${config.api}/staff-members?sort=firstName:asc`, { json: true });
 }
 
 function create(staffMember) {
-  return got.post('http://localhost:3000/v1/staff-members', {
+  return got.post('${config.api}/staff-members', {
     json: true,
     body: staffMember
   })
