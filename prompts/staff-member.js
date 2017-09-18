@@ -37,6 +37,12 @@ function ask() {
         }
         return 'Please enter role in lowercase with only letters';
       }
+    },
+    {
+      type: 'confirm',
+      name: 'current',
+      message: 'Does staff member currenlty work at SOON_?',
+      default: true
     }
   ];
   
