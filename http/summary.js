@@ -1,7 +1,8 @@
 const got = require('got');
+const config = require('../config/config');
 
 function create(summary) {
-  return got.post('http://localhost:3000/v1/summaries', {
+  return got.post(`${config.api}/summaries`, {
     json: true,
     body: summary
   })

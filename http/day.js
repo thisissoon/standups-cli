@@ -1,7 +1,8 @@
 const got = require('got');
+const config = require('../config/config');
 
 function create(date) {
-  return got.post('http://localhost:3000/v1/days', { 
+  return got.post(`${config.api}/days`, { 
     json: true,
     body: {
       date
