@@ -6,7 +6,7 @@ ___
 
 # Stand-ups Visualisation CLI
 
-A simple [Inquirer](https://www.npmjs.com/package/aglio) based interactive command line interface for saving morning stand-ups to a database via requests to a stand-up web API.
+A extreamly simple and crude [Inquirer](https://www.npmjs.com/package/aglio) based interactive command line interface for saving morning stand-ups to a database via requests to a stand-up web API.
 
 This project was used as a learning tool for interactive command line intefaces.
 
